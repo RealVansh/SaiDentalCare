@@ -143,7 +143,7 @@ export default function AboutPage() {
           <div className="mb-20">
             <h3 className="font-heading text-2xl font-bold text-neutral-800 mb-6 text-center">Principal Doctors</h3>
             
-            <div className="md:hidden flex justify-end items-center text-accent-500 text-xs uppercase tracking-widest font-bold mb-4 pr-6">
+            <div className="md:hidden flex justify-center items-center text-accent-500 text-xs uppercase tracking-widest font-bold mb-4">
                Swipe to explore <span className="ml-2 text-lg">→</span>
             </div>
 
