@@ -141,7 +141,12 @@ export default function AboutPage() {
 
           {/* Principal Doctors */}
           <div className="mb-20">
-            <h3 className="font-heading text-2xl font-bold text-neutral-800 mb-8 text-center">Principal Doctors</h3>
+            <h3 className="font-heading text-2xl font-bold text-neutral-800 mb-6 text-center">Principal Doctors</h3>
+            
+            <div className="md:hidden flex justify-end items-center text-accent-500 text-xs uppercase tracking-widest font-bold mb-4 pr-6">
+               Swipe to explore <span className="ml-2 text-lg">→</span>
+            </div>
+
             <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:snap-none no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
               {principalDoctors.map((doc, i) => (
                 <div
