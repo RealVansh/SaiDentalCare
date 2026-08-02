@@ -1,0 +1,56 @@
+import type { Metadata } from "next";
+import { Inter, Outfit } from "next/font/google";
+import "./globals.css";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: "SAI Dental Care — Premium Dental Clinic",
+    template: "%s | SAI Dental Care",
+  },
+  description:
+    "Experience world-class dental care with cutting-edge technology and a gentle touch. SAI Dental Care offers comprehensive dental services in a comfortable, modern environment.",
+  keywords: [
+    "dental clinic",
+    "dentist",
+    "dental care",
+    "cosmetic dentistry",
+    "orthodontics",
+    "dental implants",
+  ],
+};
+
+import { MobileActionBar } from "@/components/ui/MobileActionBar";
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${inter.variable} ${outfit.variable} antialiased`}
+    >
+      <body className="min-h-screen flex flex-col bg-background text-foreground font-body">
+        <Navbar />
+        <main className="flex-1 pb-16 md:pb-0">{children}</main>
+        <Footer />
+        <MobileActionBar />
+      </body>
+    </html>
+  );
+}
