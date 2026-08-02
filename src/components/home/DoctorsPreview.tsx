@@ -48,9 +48,13 @@ export const DoctorsPreview = () => {
     <>
     <section className="pt-16 pb-8 bg-primary-900 grain-overlay overflow-hidden">
       <div className="section-container">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
           <span className="eyebrow-label-light">Our Team</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold !text-white text-white mt-4">Meet Our Expert Doctors</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold !text-white text-white mt-4 mb-6 md:mb-0">Meet Our Expert Doctors</h2>
+          
+          <div className="md:hidden flex justify-end items-center text-accent-300 text-xs uppercase tracking-widest font-bold pr-6">
+             Swipe to explore <span className="ml-2 text-lg">→</span>
+          </div>
         </div>
 
         <motion.div 

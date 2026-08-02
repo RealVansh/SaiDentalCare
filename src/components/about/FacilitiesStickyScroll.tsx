@@ -68,10 +68,11 @@ export const FacilitiesStickyScroll = ({ facilities }: { facilities: Facility[] 
   };
 
   return (
+    <>
     <section
       ref={sectionRef}
-      style={{ height: `${facilities.length * VH_PER_ITEM}vh` }}
-      className="relative w-full"
+      style={{ height: typeof window !== 'undefined' && window.innerWidth >= 768 ? `${facilities.length * VH_PER_ITEM}vh` : 'auto' }}
+      className="relative w-full hidden md:block"
     >
       {/* Sticky Container */}
       <div className="sticky top-0 h-screen w-full overflow-hidden">
@@ -210,75 +211,49 @@ export const FacilitiesStickyScroll = ({ facilities }: { facilities: Facility[] 
               </div>
             </div>
 
-            {/* Mobile layout */}
-            <div className="flex md:hidden flex-col items-center gap-6">
-
-              {/* Section title */}
-              <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-accent-500 text-center">State-of-the-Art Facilities</h2>
-
-              {/* Image */}
-              <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl ring-1 ring-white/10">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={`m-img-${activeIndex}`}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="absolute inset-0"
-                  >
-                    <Image
-                      src={facilities[activeIndex].image}
-                      alt={facilities[activeIndex].title}
-                      fill
-                      className="object-cover"
-                      sizes="100vw"
-                      priority
-                    />
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-
-              {/* Text */}
-              <div className="w-full text-center">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={`m-text-${activeIndex}`}
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    <h3 className="text-2xl font-heading font-bold text-white mb-3 leading-tight">
-                      {facilities[activeIndex].title}
-                    </h3>
-                    <p className="text-base leading-relaxed text-white/70">
-                      {facilities[activeIndex].desc}
-                    </p>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-
-              {/* Dots */}
-              <div className="flex items-center gap-3 mt-2">
-                {facilities.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleItemClick(index)}
-                    className={`h-1.5 rounded-full transition-all duration-500 ${
-                      activeIndex === index
-                        ? "w-8 bg-accent-500"
-                        : "w-3 bg-white/30"
-                    }`}
-                    aria-label={`View facility ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </section>
+
+    {/* Mobile Vertical Stack */}
+    <section className="w-full md:hidden py-16 px-6 bg-black relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary-950 to-black"></div>
+      <div className="relative z-10 max-w-sm mx-auto">
+        <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-accent-500 text-center mb-10">State-of-the-Art Facilities</h2>
+        
+        <div className="flex flex-col gap-12">
+          {facilities.map((facility, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col items-center text-center gap-5"
+            >
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <Image
+                  src={facility.image}
+                  alt={facility.title}
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-heading font-bold text-white mb-2 leading-tight">
+                  {facility.title}
+                </h3>
+                <p className="text-base leading-relaxed text-white/70">
+                  {facility.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+    </>
   );
 };
