@@ -52,7 +52,7 @@ export const DoctorsPreview = () => {
           <span className="eyebrow-label-light">Our Team</span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold !text-white text-white mt-4 mb-6 md:mb-0">Meet Our Expert Doctors</h2>
           
-          <div className="md:hidden flex justify-end items-center text-accent-300 text-xs uppercase tracking-widest font-bold pr-6">
+          <div className="md:hidden flex justify-center items-center text-accent-300 text-xs uppercase tracking-widest font-bold">
              Swipe to explore <span className="ml-2 text-lg">→</span>
           </div>
         </div>
