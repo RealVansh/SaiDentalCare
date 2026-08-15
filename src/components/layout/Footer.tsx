@@ -4,18 +4,18 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services" },
+  { label: "Treatments", href: "/treatments" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 
-const topServices = [
-  { label: "Implantology", href: "/services#implantology" },
-  { label: "Laser Dentistry", href: "/services#laser-dentistry" },
-  { label: "Orthodontics", href: "/services#orthodontics" },
-  { label: "Smile Designing", href: "/services#smile-designing" },
-  { label: "Aligners", href: "/services#aligners" },
-  { label: "Crowns & Bridges", href: "/services#crowns-bridges" },
+const topTreatments = [
+  { label: "Implantology", href: "/treatments#implantology" },
+  { label: "Laser Dentistry", href: "/treatments#laser-dentistry" },
+  { label: "Orthodontics", href: "/treatments#orthodontics" },
+  { label: "Smile Designing", href: "/treatments#smile-designing" },
+  { label: "Aligners", href: "/treatments#aligners" },
+  { label: "Crowns & Bridges", href: "/treatments#crowns-bridges" },
 ];
 
 export function Footer() {
@@ -65,13 +65,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* ── Top Services ── */}
+          {/* ── Top Treatments ── */}
           <div className="space-y-4">
             <h4 className="text-sm font-heading font-semibold text-accent-400 uppercase tracking-wider">
-              Top Services
+              Top Treatments
             </h4>
             <ul className="space-y-2">
-              {topServices.map((service) => (
+              {topTreatments.map((service) => (
                 <li key={service.href}>
                   <Link
                     href={service.href}

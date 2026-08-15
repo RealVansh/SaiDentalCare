@@ -30,7 +30,7 @@ export default function AboutPage() {
       name: "Dr. Nagaraj",
       creds: "BDS, MS (IF Germany)",
       role: "Dental Surgeon & Implantologist",
-      desc: "Leading expert in advanced implantology and oral surgery with decades of experience. Dr. Nagaraj is renowned for his precision in full mouth rehabilitations and guided implant surgeries. His philosophy centers around restoring not just function, but the confidence of his patients.",
+      desc: "Leading expert in advanced implantology and oral surgery with decades of experience. Dr. Nagaraj is renowned for his precision in full mouth rehabilitations.",
       initials: "DN"
     },
     {
@@ -38,7 +38,7 @@ export default function AboutPage() {
       name: "Dr. Priya Nagaraj",
       creds: "BDS, FDS",
       role: "Restorative & Laser Dentist",
-      desc: "Specializes in restorative procedures and pain-free laser dentistry for optimal patient comfort. Dr. Priya brings a gentle touch to every procedure, focusing on minimal intervention and maximizing the preservation of natural tooth structure.",
+      desc: "Specializes in smile design, restorative procedures and pain-free laser dentistry for optimal patient comfort.",
       initials: "DP"
     },
     {
@@ -46,7 +46,7 @@ export default function AboutPage() {
       name: "Dr. N.P. Abishek",
       creds: "BDS (MDS)",
       role: "Endodontics & Conservative Dentistry",
-      desc: "Dedicated to saving natural teeth through precision endodontics and conservative treatments. Utilizing the latest rotary endodontics and magnification technology, Dr. Abishek ensures root canal therapies are highly successful and painless.",
+      desc: "Dedicated to saving natural teeth through precision endodontics and conservative treatments. Utilizing the latest rotary endodontics and magnification technology, Dr. Abishek brings a gentle touch to every procedure, focusing on minimal intervention and maximizing the preservation of natural tooth structure.",
       initials: "DA"
     }
   ];
@@ -115,7 +115,7 @@ export default function AboutPage() {
                 Our Mission
               </motion.h2>
               <motion.p variants={fadeInUp} className="text-lg text-neutral-600 mb-8 leading-relaxed">
-                Our mission and passion is all about ensuring patient comfort and delivering outstanding results that are functional, esthetic, and long lasting. We use the latest of technology and in giving back to the community through our philanthropic work.
+                Our mission and passion is all about ensuring patient comfort and delivering outstanding results that are functional, esthetic, and long lasting. With Inclusion of latest technology.
               </motion.p>
               <motion.div variants={fadeInUp} className="pl-6 border-l-4 border-primary-500 italic text-xl text-neutral-700 py-2">
                 "From front desk to the dental chair, you can rest assured that you are in good hands."
@@ -141,12 +141,7 @@ export default function AboutPage() {
 
           {/* Principal Doctors */}
           <div className="mb-20">
-            <h3 className="font-heading text-2xl font-bold text-neutral-800 mb-6 text-center">Principal Doctors</h3>
-            
-            <div className="md:hidden flex justify-center items-center text-accent-500 text-xs uppercase tracking-widest font-bold mb-4">
-               Swipe to explore <span className="ml-2 text-lg">→</span>
-            </div>
-
+            <h3 className="font-heading text-2xl font-bold text-neutral-800 mb-8 text-center">Principal Doctors</h3>
             <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:snap-none no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
               {principalDoctors.map((doc, i) => (
                 <div
@@ -207,14 +202,7 @@ export default function AboutPage() {
                         <p className="text-neutral-600 mb-6 leading-relaxed">
                           {doc.desc}
                         </p>
-                        <div className="bg-neutral-50 rounded-xl p-5 mb-6 border border-neutral-100">
-                          <h6 className="font-semibold text-neutral-900 mb-2">Areas of Expertise</h6>
-                          <ul className="text-neutral-600 text-sm space-y-2 list-disc list-inside">
-                            <li>Comprehensive Treatment Planning</li>
-                            <li>Advanced Diagnostics & Consultations</li>
-                            <li>Patient-centric Gentle Care</li>
-                          </ul>
-                        </div>
+
                         <Link href="/contact" className="btn-gold px-6 py-3 inline-flex">
                           Book Consultation
                         </Link>

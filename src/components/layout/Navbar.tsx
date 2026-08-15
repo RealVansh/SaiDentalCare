@@ -6,38 +6,38 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-/* ── Service categories for the mega-dropdown ── */
-const serviceCategories = [
+/* ── Treatment categories for the mega-dropdown ── */
+const treatmentCategories = [
   {
     title: "Surgical & Restorative",
     items: [
-      { label: "Implantology", href: "/services#implantology" },
-      { label: "Root Canal Treatment", href: "/services#root-canal" },
-      { label: "Deep Caries Management", href: "/services#deep-caries" },
+      { label: "Implantology", href: "/treatments#implantology" },
+      { label: "Root Canal Treatment", href: "/treatments#root-canal" },
+      { label: "Deep Caries Management", href: "/treatments#deep-caries" },
     ],
   },
   {
     title: "Cosmetic & Alignment",
     items: [
-      { label: "Smile Designing", href: "/services#smile-designing" },
-      { label: "Crowns & Bridges", href: "/services#crowns-bridges" },
-      { label: "Orthodontics", href: "/services#orthodontics" },
-      { label: "Aligners", href: "/services#aligners" },
+      { label: "Smile Designing", href: "/treatments#smile-designing" },
+      { label: "Crowns & Bridges", href: "/treatments#crowns-bridges" },
+      { label: "Orthodontics", href: "/treatments#orthodontics" },
+      { label: "Aligners", href: "/treatments#aligners" },
     ],
   },
   {
     title: "Preventive Care",
     items: [
-      { label: "Deep Scaling", href: "/services#deep-scaling" },
-      { label: "Pediatric Dentistry", href: "/services#pediatric" },
+      { label: "Deep Scaling", href: "/treatments#deep-scaling" },
+      { label: "Pediatric Dentistry", href: "/treatments#pediatric" },
     ],
   },
   {
     title: "Specialized Care",
     items: [
-      { label: "Laser Dentistry", href: "/services#laser-dentistry" },
-      { label: "Sedation Dentistry", href: "/services#sedation" },
-      { label: "Dentures", href: "/services#dentures" },
+      { label: "Laser Dentistry", href: "/treatments#laser-dentistry" },
+      { label: "Sedation Dentistry", href: "/treatments#sedation" },
+      { label: "Dentures", href: "/treatments#dentures" },
     ],
   },
 ];
@@ -45,7 +45,7 @@ const serviceCategories = [
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services", hasDropdown: true },
+  { label: "Treatments", href: "/treatments", hasDropdown: true },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
@@ -117,7 +117,7 @@ export function Navbar() {
                     <button
                       onClick={() => setServicesOpen(!servicesOpen)}
                     className={`inline-flex items-center gap-1 text-sm font-medium transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:bg-accent-500 after:transition-all after:duration-300 ${
-                        pathname.startsWith("/services")
+                        pathname.startsWith("/treatments")
                           ? "text-primary-600 after:w-full"
                           : "text-neutral-600 hover:text-primary-600 after:w-0 hover:after:w-full"
                       }`}
@@ -138,9 +138,9 @@ export function Navbar() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 8, scale: 0.97 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[560px] bg-white rounded-2xl shadow-xl border border-neutral-100 p-6 grid grid-cols-2 gap-6"
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[800px] bg-white rounded-2xl shadow-xl border border-neutral-100 p-8 grid grid-cols-4 gap-8"
                         >
-                          {serviceCategories.map((cat) => (
+                          {treatmentCategories.map((cat) => (
                             <div key={cat.title}>
                               <h4 className="text-xs font-heading font-semibold text-primary-600 uppercase tracking-wider mb-3">
                                 {cat.title}
@@ -163,11 +163,11 @@ export function Navbar() {
                           {/* View all link */}
                           <div className="col-span-2 pt-4 border-t border-neutral-100">
                             <Link
-                              href="/services"
+                              href="/treatments"
                               onClick={() => setServicesOpen(false)}
                               className="text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors"
                             >
-                              View All Services →
+                              View All Treatments →
                             </Link>
                           </div>
                         </motion.div>
@@ -248,7 +248,7 @@ export function Navbar() {
                               transition={{ duration: 0.2 }}
                               className="overflow-hidden pl-4 pb-2"
                             >
-                              {serviceCategories.map((cat) => (
+                              {treatmentCategories.map((cat) => (
                                 <div key={cat.title} className="mb-3">
                                   <p className="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-1.5">
                                     {cat.title}
@@ -265,10 +265,10 @@ export function Navbar() {
                                 </div>
                               ))}
                               <Link
-                                href="/services"
+                                href="/treatments"
                                 className="block text-sm font-medium text-primary-600 py-1.5 pl-2"
                               >
-                                View All Services →
+                                View All Treatments →
                               </Link>
                             </motion.div>
                           )}

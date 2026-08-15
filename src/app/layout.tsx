@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | SAI Dental Care",
   },
   description:
-    "Experience world-class dental care with cutting-edge technology and a gentle touch. SAI Dental Care offers comprehensive dental services in a comfortable, modern environment.",
+    "Experience world-class dental care with cutting-edge technology and a gentle touch. SAI Dental Care offers comprehensive dental treatments in a comfortable, modern environment.",
   keywords: [
     "dental clinic",
     "dentist",

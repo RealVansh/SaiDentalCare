@@ -76,7 +76,7 @@ export const Hero = () => {
             </motion.h1>
             
             <motion.p variants={itemVariants} className="text-2xl md:text-3xl font-heading font-bold text-neutral-600 mb-6">
-              <span className="text-accent-600">Your Smile,</span> Our Passion
+              <span className="text-accent-600">Ethics, Excellence,</span> Experience
             </motion.p>
             
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-neutral-600 mb-8 max-w-xl leading-relaxed">
@@ -87,8 +87,8 @@ export const Hero = () => {
               <Link href="tel:+917200596749" className="btn-gold text-base px-8 py-3.5 shadow-lg hover:shadow-xl transition-shadow">
                 Book Appointment
               </Link>
-              <Link href="/services" className="inline-flex justify-center items-center px-8 py-3.5 rounded-full border-2 border-neutral-200 text-neutral-700 font-medium hover:border-accent-400 hover:text-accent-700 transition-all duration-300">
-                Our Services
+              <Link href="/treatments" className="inline-flex justify-center items-center px-8 py-3.5 rounded-full border-2 border-neutral-200 text-neutral-700 font-medium hover:border-accent-400 hover:text-accent-700 transition-all duration-300">
+                Our Treatments
               </Link>
             </motion.div>
           </motion.div>
@@ -142,7 +142,7 @@ export const Hero = () => {
                 🏆
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-bold text-neutral-900 leading-none">Award Winning</span>
+                <span className="text-sm font-bold text-neutral-900 leading-none">Contemporary</span>
                 <span className="text-xs font-medium text-neutral-600 mt-1">Dental Care</span>
               </div>
             </motion.div>
@@ -165,8 +165,8 @@ export const Hero = () => {
             <p className="text-sm text-neutral-600 mt-1 font-medium">Generations of Trust</p>
           </div>
           <div className="stat-item flex flex-col">
-            <Counter end={12} suffix="+" />
-            <p className="text-sm text-neutral-600 mt-1 font-medium">Treatments</p>
+            <Counter end={1} suffix="L+" />
+            <p className="text-sm text-neutral-600 mt-1 font-medium">Procedures</p>
           </div>
           <div className="stat-item flex flex-col">
             <Counter end={10} suffix="+" />

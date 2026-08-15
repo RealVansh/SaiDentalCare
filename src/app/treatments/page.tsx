@@ -48,7 +48,7 @@ export default function ServicesPage() {
           desc: "We make dental implant process the easiest experience possible. You'll be smiling, speaking and chewing in no time and for years to come.",
           bullets: [
             "Contemporary implants",
-            "No cut, no bleeding, no patient discomfort",
+            "Minimally invasive",
             "Immediate fixation of crowns",
             "Can be done for medically compromised patients, especially diabetic"
           ]
@@ -175,7 +175,7 @@ export default function ServicesPage() {
             variants={fadeInUp}
             className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            Our <span className="gradient-text-gold">Services</span>
+            Our <span className="gradient-text-gold">Treatments</span>
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -184,12 +184,12 @@ export default function ServicesPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-primary-200 max-w-2xl mx-auto"
           >
-            Comprehensive Care, One Convenient Location
+            Comprehensive, personalized dental treatments for the whole family.
           </motion.p>
         </div>
       </section>
 
-      {/* Section 2: Service Categories */}
+      {/* Section 2: Treatment Categories */}
       <section className="section-padding bg-white">
         <div className="section-container">
           {serviceCategories.map((category, catIndex) => (
