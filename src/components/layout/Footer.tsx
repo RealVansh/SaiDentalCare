@@ -122,7 +122,7 @@ export function Footer() {
                   <p>Mon – Sat</p>
                   <p>10:30 AM – 1:00 PM</p>
                   <p>5:30 PM – 8:00 PM</p>
-                  <p className="text-neutral-500 mt-1">Sunday: Closed</p>
+                  <p className="text-neutral-500 mt-1">Sunday Holiday</p>
                 </div>
               </li>
             </ul>

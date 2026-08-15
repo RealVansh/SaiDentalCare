@@ -46,7 +46,7 @@ export default function AboutPage() {
       name: "Dr. N.P. Abishek",
       creds: "BDS (MDS)",
       role: "Endodontics & Conservative Dentistry",
-      desc: "Dedicated to saving natural teeth through precision endodontics and conservative treatments. Utilizing the latest rotary endodontics and magnification technology, Dr. Abishek brings a gentle touch to every procedure, focusing on minimal intervention and maximizing the preservation of natural tooth structure.",
+      desc: "Dedicated to saving natural teeth through precision endodontics and conservative treatments. Utilizing the latest rotary endodontics and magnification technology. Dr. Abishek brings a gentle touch to every procedure, focusing on minimal intervention and maximizing the preservation of natural tooth structure.",
       initials: "DA"
     }
   ];

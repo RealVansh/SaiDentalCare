@@ -64,7 +64,7 @@ export default function ContactPage() {
                   <span>5:30 PM – 8:00 PM</span>
                 </div>
                 <div className="pt-3 mt-3 border-t border-neutral-100">
-                  <span className="font-medium text-red-500">Sunday: Closed</span>
+                  <span className="font-medium text-red-500">Sunday Holiday</span>
                 </div>
               </div>
             </div>

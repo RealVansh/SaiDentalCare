@@ -307,49 +307,66 @@ export default function ServicesPage() {
                 <div className="p-8 md:p-10">
                   <p className="text-neutral-700 text-lg md:text-xl mb-10 leading-relaxed font-medium">{service.desc}</p>
                   
-                  <div className="grid md:grid-cols-2 gap-10">
-                    {/* How We Do It */}
-                    <div className="bg-neutral-50/50 rounded-2xl p-6 md:p-8 border border-neutral-100/50">
-                      <h5 className="font-heading text-xl font-bold text-neutral-900 mb-5 flex items-center gap-3">
-                        <Target className="w-6 h-6 text-accent-500" /> How We Do It
+                  {service.id === 'root-canal' || service.id === 'deep-caries' || service.id === 'deep-scaling' || service.id === 'pediatric' || service.id === 'sedation' || service.id === 'dentures' ? null : service.id === 'implantology' || service.id === 'orthodontics' || service.id === 'laser-dentistry' ? (
+                    <div className="bg-neutral-50/50 rounded-2xl p-6 md:p-8 border border-neutral-100/50 max-w-3xl mx-auto">
+                      <h5 className="font-heading text-xl md:text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-3 border-b border-neutral-200/60 pb-4">
+                        <Sparkles className="w-6 h-6 text-accent-500" /> Our Treatment Approach
                       </h5>
-                      <p className="text-neutral-600 mb-6 text-base leading-relaxed">
-                        We utilize a systematic, precise approach tailored to your individual anatomy. Using 3D scanning and digital planning, we ensure predictable, beautiful results.
-                      </p>
-                      {service.bullets.length > 0 && (
-                        <ul className="space-y-4">
-                          {service.bullets.map((bullet: string, idx: number) => (
-                            <li key={idx} className="flex items-start gap-3">
-                              <span className="w-2 h-2 rounded-full bg-accent-500 mt-2 flex-shrink-0 shadow-sm" />
-                              <span className="text-neutral-700 font-medium">{bullet}</span>
+                      <ul className="space-y-5">
+                        {service.bullets.map((bullet: string, idx: number) => (
+                          <li key={idx} className="flex items-start gap-4">
+                            <span className="w-2.5 h-2.5 rounded-full bg-accent-500 mt-2 flex-shrink-0 shadow-sm" />
+                            <span className="text-neutral-700 font-medium text-lg leading-relaxed">{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <div className={`grid gap-10 ${service.id === 'smile-designing' || service.id === 'crowns-bridges' || service.id === 'aligners' ? 'grid-cols-1 max-w-3xl mx-auto' : 'md:grid-cols-2'}`}>
+                      {/* How We Do It / Our Treatment Approach */}
+                      <div className="bg-neutral-50/50 rounded-2xl p-6 md:p-8 border border-neutral-100/50">
+                        <h5 className="font-heading text-xl md:text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-3 border-b border-neutral-200/60 pb-4">
+                          <Sparkles className="w-6 h-6 text-accent-500" /> Our Treatment Approach
+                        </h5>
+                        <p className="text-neutral-600 mb-6 text-base leading-relaxed">
+                          We utilize a systematic, precise approach tailored to your individual anatomy. Using 3D scanning and digital planning, we ensure predictable, beautiful results.
+                        </p>
+                        {service.bullets.length > 0 && (
+                          <ul className="space-y-4">
+                            {service.bullets.map((bullet: string, idx: number) => (
+                              <li key={idx} className="flex items-start gap-3">
+                                <span className="w-2 h-2 rounded-full bg-accent-500 mt-2 flex-shrink-0 shadow-sm" />
+                                <span className="text-neutral-700 font-medium">{bullet}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+
+                      {/* Safety & Tech */}
+                      {!(service.id === 'smile-designing' || service.id === 'crowns-bridges' || service.id === 'aligners') && (
+                        <div className="bg-neutral-50/50 rounded-2xl p-6 md:p-8 border border-neutral-100/50 flex flex-col">
+                          <h5 className="font-heading text-xl font-bold text-neutral-900 mb-5 flex items-center gap-3">
+                            <Shield className="w-6 h-6 text-accent-500" /> Safety & Technology
+                          </h5>
+                          <ul className="space-y-5 mb-8">
+                            <li className="flex gap-4">
+                              <Sparkles className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                              <span className="text-neutral-600 font-medium">Stringent multi-step sterilization protocols surpassing international standards.</span>
                             </li>
-                          ))}
-                        </ul>
+                            <li className="flex gap-4">
+                              <Smile className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                              <span className="text-neutral-600 font-medium">Focus on pain-free procedures utilizing advanced anesthetics and laser technology.</span>
+                            </li>
+                            <li className="flex gap-4">
+                              <Target className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                              <span className="text-neutral-600 font-medium">German-engineered equipment for unparalleled precision and durability.</span>
+                            </li>
+                          </ul>
+                        </div>
                       )}
                     </div>
-
-                    {/* Safety & Tech */}
-                    <div className="bg-neutral-50/50 rounded-2xl p-6 md:p-8 border border-neutral-100/50 flex flex-col">
-                      <h5 className="font-heading text-xl font-bold text-neutral-900 mb-5 flex items-center gap-3">
-                        <Shield className="w-6 h-6 text-accent-500" /> Safety & Technology
-                      </h5>
-                      <ul className="space-y-5 mb-8">
-                        <li className="flex gap-4">
-                          <Sparkles className="w-6 h-6 text-primary-500 flex-shrink-0" />
-                          <span className="text-neutral-600 font-medium">Stringent multi-step sterilization protocols surpassing international standards.</span>
-                        </li>
-                        <li className="flex gap-4">
-                          <Smile className="w-6 h-6 text-primary-500 flex-shrink-0" />
-                          <span className="text-neutral-600 font-medium">Focus on pain-free procedures utilizing advanced anesthetics and laser technology.</span>
-                        </li>
-                        <li className="flex gap-4">
-                          <Target className="w-6 h-6 text-primary-500 flex-shrink-0" />
-                          <span className="text-neutral-600 font-medium">German-engineered equipment for unparalleled precision and durability.</span>
-                        </li>
-                      </ul>
-
-                    </div>
-                  </div>
+                  )}
                 </div>
               </motion.div>
             </div>
