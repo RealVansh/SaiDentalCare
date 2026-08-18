@@ -1,28 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, MessageCircle, Calendar } from "lucide-react";
+import { Phone } from "lucide-react";
 
 export function MobileActionBar() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-t border-accent-200/30 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] md:hidden safe-area-bottom">
-      <div className="flex items-center justify-around p-3 gap-2">
-        <Link 
-          href="tel:+917200596749" 
-          className="flex flex-col items-center justify-center gap-1 text-primary-700 hover:text-primary-800 transition-colors w-1/2"
-        >
-          <Phone size={22} />
-          <span className="text-[10px] font-medium uppercase tracking-wider">Call</span>
-        </Link>
-        
-        <Link 
-          href="/contact" 
-          className="flex flex-col items-center justify-center gap-1 btn-gold rounded-lg py-2.5 w-1/2"
-        >
-          <Calendar size={20} />
-          <span className="text-[10px] font-medium uppercase tracking-wider">Book</span>
-        </Link>
-      </div>
-    </div>
+    <Link
+      href="tel:+917200596749"
+      className="fixed bottom-6 right-6 z-50 md:hidden w-[60px] h-[60px] rounded-full flex items-center justify-center active:scale-90 transition-transform duration-200"
+      aria-label="Call SAI Dental"
+      style={{
+        background: "linear-gradient(135deg, var(--color-accent-500), var(--color-accent-700))",
+        boxShadow: "0 8px 24px rgba(214, 163, 101, 0.45), 0 2px 8px rgba(0,0,0,0.12)",
+      }}
+    >
+      <Phone size={26} color="#fff" strokeWidth={2} />
+    </Link>
   );
 }
