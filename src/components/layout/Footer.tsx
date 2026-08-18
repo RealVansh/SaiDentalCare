@@ -30,7 +30,7 @@ export function Footer() {
           <div className="space-y-4">
             <div>
               <h3 className="text-xl font-heading font-bold text-white">
-                SAI Dental
+                Sai Dental
               </h3>
               <p className="text-xs text-accent-500 tracking-wider uppercase mt-0.5">
                 Since 1999
@@ -134,7 +134,7 @@ export function Footer() {
       <div className="border-t border-neutral-800">
         <div className="section-container py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-neutral-500">
-            © {new Date().getFullYear()} SAI Dental since 1999. All rights reserved.
+            © {new Date().getFullYear()} Sai Dental since 1999. All rights reserved.
           </p>
           <p className="text-xs text-neutral-600">
             Ethics · Excellence · Experience

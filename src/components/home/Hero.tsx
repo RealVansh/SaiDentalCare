@@ -73,7 +73,7 @@ export const Hero = () => {
             </motion.span>
             <motion.div variants={itemVariants} className="flex flex-col mb-4 pb-2">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold gradient-text leading-tight">
-                SAI Dental
+                Sai Dental
               </h1>
               <span className="text-lg md:text-xl font-medium tracking-[0.2em] text-accent-600 uppercase mt-2">
                 SINCE 1999
@@ -86,7 +86,7 @@ export const Hero = () => {
             
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-neutral-600 mb-8 max-w-xl leading-relaxed">
               <span className="font-semibold text-neutral-900">Close to three decades</span> of experienced dentists, guided by science. Comprehensive care, one convenient location.
-            </motion.p>
+x            </motion.p>
             
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
               <Link href="tel:+917200596749" className="btn-gold text-base px-8 py-3.5 shadow-lg hover:shadow-xl transition-shadow">

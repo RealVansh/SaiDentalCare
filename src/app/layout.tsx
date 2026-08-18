@@ -18,11 +18,11 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "SAI Dental since 1999 — Premium Dental Clinic",
-    template: "%s | SAI Dental since 1999",
+    default: "Sai Dental since 1999 — Premium Dental Clinic",
+    template: "%s | Sai Dental since 1999",
   },
   description:
-    "Experience world-class dental care with cutting-edge technology and a gentle touch. SAI Dental since 1999 offers comprehensive dental treatments in a comfortable, modern environment.",
+    "Experience world-class dental care with cutting-edge technology and a gentle touch. Sai Dental since 1999 offers comprehensive dental treatments in a comfortable, modern environment.",
   keywords: [
     "dental clinic",
     "dentist",

@@ -97,7 +97,7 @@ export function Navbar() {
           {/* ── Logo ── */}
           <Link href="/" className="flex flex-col leading-tight group">
             <span className="text-xl sm:text-2xl font-heading font-bold gradient-text">
-              SAI Dental
+              Sai Dental
             </span>
             <span className="text-[10px] font-medium tracking-widest text-accent-500 uppercase">
               Since 1999

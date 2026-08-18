@@ -115,7 +115,7 @@ export default function GalleryPage() {
         <div className="section-container">
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Ready to Experience Our Facilities?</h2>
           <p className="text-primary-200 text-lg mb-8 max-w-2xl mx-auto">
-            Book a consultation today and see why thousands of patients trust SAI Dental since 1999 for their smiles.
+            Book a consultation today and see why thousands of patients trust Sai Dental since 1999 for their smiles.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link href="/contact" className="btn-gold px-8 py-3 rounded-full text-base font-bold shadow-lg shadow-accent-600/20">
