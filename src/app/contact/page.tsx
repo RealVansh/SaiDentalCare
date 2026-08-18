@@ -45,7 +45,7 @@ export default function ContactPage() {
                 <MapPin className="w-8 h-8 text-primary-600" />
               </div>
               <h3 className="font-semibold text-xl font-heading text-neutral-900 mb-4">Location</h3>
-              <a href="https://maps.google.com/?q=SAI+Dental+Care,+Kakkan+Street,+West+Tambaram,+Chennai" target="_blank" rel="noopener noreferrer" className="text-neutral-600 leading-relaxed hover:text-primary-600 transition-colors">
+              <a href="https://www.google.com/maps/place/Sai+dental+full+rehabilition+centre/@12.9270837,80.1114093,19z/data=!3m1!4b1!4m6!3m5!1s0x3a525f003f322e7d:0x2d4b87662812f94!8m2!3d12.9270824!4d80.112053!16s%2Fg%2F11z2k9h5pr?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-neutral-600 leading-relaxed hover:text-primary-600 transition-colors">
                 No. 22, 2nd Floor, Kakkan Street,<br />
                 West Tambaram, Chennai – 600045
               </a>
@@ -60,8 +60,8 @@ export default function ContactPage() {
               <div className="space-y-2 text-neutral-600 w-full">
                 <div className="flex flex-col justify-center items-center">
                   <span className="font-medium text-neutral-900 mb-1">Mon - Sat</span>
-                  <span>10:30 AM – 1:00 PM</span>
-                  <span>5:30 PM – 8:00 PM</span>
+                  <span>10:00 AM – 1:30 PM</span>
+                  <span>5:00 PM – 8:30 PM</span>
                 </div>
                 <div className="pt-3 mt-3 border-t border-neutral-100">
                   <span className="font-medium text-red-500">Sunday Holiday</span>
@@ -78,7 +78,7 @@ export default function ContactPage() {
           <h2 className="text-2xl md:text-3xl font-bold font-heading text-neutral-900 mb-8 text-center">Find Us on the Map</h2>
           <div className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border border-neutral-200 bg-neutral-200">
             <iframe 
-              src="https://maps.google.com/maps?q=West+Tambaram+Chennai&output=embed" 
+              src="https://maps.google.com/maps?q=Sai+dental+full+rehabilition+centre&t=&z=19&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

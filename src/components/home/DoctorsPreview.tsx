@@ -270,7 +270,7 @@ export const DoctorsPreview = () => {
           </div>
           
           <p className="text-accent-900/70 text-sm font-semibold tracking-wide">
-            ⏰ Mon – Sat: 10:30 AM – 1:00 PM | 5:30 PM – 8:00 PM
+            ⏰ Mon – Sat: 10:00 AM – 1:30 PM | 5:00 PM – 8:30 PM
           </p>
         </motion.div>
       </div>

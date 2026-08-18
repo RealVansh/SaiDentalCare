@@ -42,7 +42,7 @@ export const AboutPreview = () => {
             <div className="absolute -bottom-8 -right-4 w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shadow-xl border-4 border-white hidden md:block">
               <Image 
                 src="/images/clinic/reception.jpg" 
-                alt="SAI Dental Care reception" 
+                alt="SAI Dental since 1999 reception" 
                 fill 
                 className="object-cover"
                 sizes="200px"
@@ -70,7 +70,7 @@ export const AboutPreview = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="eyebrow-label mb-4">About Us</span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900 mt-4 mb-6">Why Choose SAI Dental Care?</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900 mt-4 mb-6">Why Choose SAI Dental since 1999?</h2>
             <p className="text-neutral-600 text-lg mb-8 leading-relaxed">
               Our mission and passion is all about ensuring patient comfort and delivering outstanding results that are functional, esthetic, and long lasting.
             </p>

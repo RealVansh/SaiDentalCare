@@ -30,7 +30,7 @@ export function Footer() {
           <div className="space-y-4">
             <div>
               <h3 className="text-xl font-heading font-bold text-white">
-                SAI Dental Care
+                SAI Dental
               </h3>
               <p className="text-xs text-accent-500 tracking-wider uppercase mt-0.5">
                 Since 1999
@@ -120,8 +120,8 @@ export function Footer() {
                 <Clock className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />
                 <div className="text-sm text-neutral-400">
                   <p>Mon – Sat</p>
-                  <p>10:30 AM – 1:00 PM</p>
-                  <p>5:30 PM – 8:00 PM</p>
+                  <p>10:00 AM – 1:30 PM</p>
+                  <p>5:00 PM – 8:30 PM</p>
                   <p className="text-neutral-500 mt-1">Sunday Holiday</p>
                 </div>
               </li>
@@ -134,7 +134,7 @@ export function Footer() {
       <div className="border-t border-neutral-800">
         <div className="section-container py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-neutral-500">
-            © {new Date().getFullYear()} SAI Dental Care. All rights reserved.
+            © {new Date().getFullYear()} SAI Dental since 1999. All rights reserved.
           </p>
           <p className="text-xs text-neutral-600">
             Ethics · Excellence · Experience

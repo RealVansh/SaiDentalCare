@@ -27,8 +27,8 @@ export const CallToAction = () => {
           </Link>
         </div>
         
-        <p className="text-primary-300 text-sm font-medium">
-          ⏰ Mon – Sat: 10:30 AM – 1:00 PM | 5:30 PM – 8:00 PM
+        <p className="text-white/80 text-sm font-medium tracking-wide">
+          ⏰ Mon – Sat: 10:00 AM – 1:30 PM | 5:00 PM – 8:30 PM
         </p>
       </div>
     </section>

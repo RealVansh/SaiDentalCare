@@ -71,16 +71,21 @@ export const Hero = () => {
             <motion.span variants={itemVariants} className="eyebrow-label mb-6">
               Full Mouth Rehabilitation Centre
             </motion.span>
-            <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold gradient-text leading-tight mb-4 pb-2">
-              SAI Dental Care
-            </motion.h1>
+            <motion.div variants={itemVariants} className="flex flex-col mb-4 pb-2">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold gradient-text leading-tight">
+                SAI Dental
+              </h1>
+              <span className="text-lg md:text-xl font-medium tracking-[0.2em] text-accent-600 uppercase mt-2">
+                SINCE 1999
+              </span>
+            </motion.div>
             
             <motion.p variants={itemVariants} className="text-2xl md:text-3xl font-heading font-bold text-neutral-600 mb-6">
               <span className="text-accent-600">Ethics, Excellence,</span> Experience
             </motion.p>
             
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-neutral-600 mb-8 max-w-xl leading-relaxed">
-              27 years of experienced dentists, guided by science. Comprehensive care, one convenient location.
+              <span className="font-semibold text-neutral-900">Close to three decades</span> of experienced dentists, guided by science. Comprehensive care, one convenient location.
             </motion.p>
             
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
@@ -150,25 +155,21 @@ export const Hero = () => {
         </div>
 
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 py-8 border-t border-neutral-200"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 py-8 border-t border-neutral-200 text-center md:text-left"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
         >
-          <div className="stat-item flex flex-col">
+          <div className="stat-item flex flex-col items-center md:items-start">
             <Counter end={27} suffix="+" />
             <p className="text-sm text-neutral-600 mt-1 font-medium">Years Experience</p>
           </div>
-          <div className="stat-item flex flex-col">
+          <div className="stat-item flex flex-col items-center md:items-start">
             <Counter end={3} suffix="" />
             <p className="text-sm text-neutral-600 mt-1 font-medium">Generations of Trust</p>
           </div>
-          <div className="stat-item flex flex-col">
-            <Counter end={1} suffix="L+" />
-            <p className="text-sm text-neutral-600 mt-1 font-medium">Procedures</p>
-          </div>
-          <div className="stat-item flex flex-col">
+          <div className="stat-item flex flex-col items-center md:items-start">
             <Counter end={10} suffix="+" />
             <p className="text-sm text-neutral-600 mt-1 font-medium">Expert Doctors</p>
           </div>

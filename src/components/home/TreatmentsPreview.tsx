@@ -10,7 +10,7 @@ const treatments = [
     id: "implantology",
     icon: Syringe,
     name: "Implantology",
-    description: "No cut, no bleeding, no discomfort. Immediate crown fixation available.",
+    description: "Implants for everyone, for any given condition.",
     fullDesc: "We make dental implant process the easiest experience possible. You'll be smiling, speaking and chewing in no time and for years to come.",
     bullets: [
       "Contemporary implants",

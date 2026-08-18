@@ -72,7 +72,7 @@ export default function AboutPage() {
             variants={fadeInUp}
             className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            About <span className="gradient-text-gold">SAI Dental Care</span>
+            About <span className="gradient-text-gold">SAI Dental since 1999</span>
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -81,7 +81,7 @@ export default function AboutPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-primary-200 max-w-2xl mx-auto"
           >
-            Full Mouth Rehabilitation Centre — Since 1999
+            Full Mouth Rehabilitation Centre
           </motion.p>
         </div>
       </section>
@@ -99,7 +99,7 @@ export default function AboutPage() {
             >
               <Image 
                 src="/images/clinic/reception.jpg" 
-                alt="SAI Dental Care Reception" 
+                alt="SAI Dental since 1999 Reception" 
                 fill 
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -304,7 +304,7 @@ export default function AboutPage() {
             variants={fadeInUp}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 !text-white text-white">Ready to experience the SAI Dental difference?</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 !text-white text-white">Ready to experience the difference at SAI Dental since 1999?</h2>
             <p className="text-primary-200 text-lg mb-8">Book your consultation today and take the first step towards a healthier, brighter smile.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-gold px-8 py-3 text-base">
