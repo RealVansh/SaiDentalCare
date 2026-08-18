@@ -2,38 +2,22 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Camera, Calendar } from 'lucide-react';
+import { Calendar, X } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Filter categories
-const categories = ["All", "Clinic", "Equipment", "Team", "Procedures"];
-
-// Dummy data for gallery
+// Actual gallery images (renamed to completely bust cache)
 const galleryItems = [
-  { id: 1, category: "Clinic", title: "Reception", aspect: "aspect-[3/4]", image: "/images/clinic/reception.jpg" },
-  { id: 2, category: "Clinic", title: "Waiting Lounge", aspect: "aspect-video", image: "/images/clinic/waiting-area.jpg" },
-  { id: 3, category: "Clinic", title: "Treatment Room 1", aspect: "aspect-[4/3]", image: "/images/clinic/room1.jpg" },
-  { id: 13, category: "Clinic", title: "Treatment Room 2", aspect: "aspect-square", image: "/images/clinic/room2.jpg" },
-  { id: 14, category: "Clinic", title: "Treatment Room 3", aspect: "aspect-[3/4]", image: "/images/clinic/room3.jpg" },
-  { id: 15, category: "Clinic", title: "Treatment Room 4", aspect: "aspect-video", image: "/images/clinic/room4.jpg" },
-  { id: 4, category: "Equipment", title: "Ortho Pantamogram (OPG)", aspect: "aspect-[4/3]", image: "/images/facilities/opg.jpg" },
-  { id: 5, category: "Equipment", title: "Intra-oral Scanner", aspect: "aspect-[4/3]", image: "/images/facilities/intra-oral-scanner.jpg" },
-  { id: 6, category: "Equipment", title: "Chair-side Sedation Unit", aspect: "aspect-[4/3]", image: "/images/facilities/sedation-unit.jpg" },
-  { id: 7, category: "Team", title: "Dr. SAI Team", aspect: "aspect-video", gradient: "from-accent-50 to-accent-100" },
-  { id: 8, category: "Team", title: "Dental Assistants", aspect: "aspect-square", gradient: "from-primary-50 to-primary-100" },
-  { id: 9, category: "Team", title: "Specialists Consult", aspect: "aspect-[3/4]", gradient: "from-accent-50 to-accent-100" },
-  { id: 10, category: "Procedures", title: "Smile Design Result", aspect: "aspect-square", gradient: "from-primary-50 to-primary-100" },
-  { id: 11, category: "Procedures", title: "Implant Placement", aspect: "aspect-video", gradient: "from-accent-50 to-accent-100" },
-  { id: 12, category: "Procedures", title: "Aligners Setup", aspect: "aspect-[4/3]", gradient: "from-primary-50 to-primary-100" },
+  { id: 2, title: "Reception Area", aspect: "aspect-[4/3]", image: "/images/clinic/clinic-reception.jpg" },
+  { id: 1, title: "Waiting Lounge", aspect: "aspect-[4/3]", image: "/images/clinic/clinic-waiting.jpg" },
+  { id: 3, title: "Treatment Room 1", aspect: "aspect-[4/3]", image: "/images/clinic/treatment-room-1.jpg" },
+  { id: 4, title: "Treatment Room 2", aspect: "aspect-[4/3]", image: "/images/clinic/treatment-room-2.jpg" },
+  { id: 5, title: "Treatment Room 3", aspect: "aspect-[4/3]", image: "/images/clinic/treatment-room-3.jpg" },
+  { id: 6, title: "Treatment Room 4", aspect: "aspect-[4/3]", image: "/images/clinic/treatment-room-4.jpg" }
 ];
 
 export default function GalleryPage() {
-  const [activeTab, setActiveTab] = useState("All");
-
-  const filteredItems = activeTab === "All" 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeTab);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <main className="min-h-screen">
@@ -53,30 +37,13 @@ export default function GalleryPage() {
       <section className="section-padding">
         <div className="section-container">
           
-          {/* Tabs */}
-          <div className="flex overflow-x-auto pb-4 mb-10 gap-3 md:justify-center scrollbar-hide">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveTab(category)}
-                className={`px-6 py-2.5 rounded-full font-medium whitespace-nowrap transition-all duration-300 ${
-                  activeTab === category 
-                    ? 'bg-gradient-to-r from-accent-500 to-accent-600 text-white shadow-md shadow-accent-500/20' 
-                    : 'bg-white border border-neutral-200 text-neutral-600 hover:border-accent-300 hover:text-accent-700'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
           {/* Grid */}
           <motion.div 
             layout
-            className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             <AnimatePresence mode="popLayout">
-              {filteredItems.map((item) => (
+              {galleryItems.map((item) => (
                 <motion.div
                   key={item.id}
                   layout
@@ -84,19 +51,12 @@ export default function GalleryPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.3 }}
-                  className={`relative group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-neutral-100 bg-white break-inside-avoid`}
+                  onClick={() => setSelectedImage(item.image)}
+                  className="relative group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-neutral-100 bg-white cursor-pointer"
                 >
-                  {/* Placeholder or Actual Image */}
-                  <div className={`w-full ${item.image ? '' : 'bg-gradient-to-br'} ${item.gradient || ''} ${item.aspect} flex flex-col items-center justify-center p-6 text-center relative`}>
-                    {item.image ? (
-                      <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-                    ) : (
-                      <>
-                        <Camera className="w-10 h-10 text-neutral-400 mb-3 opacity-50" />
-                        <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">{item.category}</span>
-                        <h3 className="text-xl font-bold font-heading text-neutral-800 mt-1">{item.title}</h3>
-                      </>
-                    )}
+                  {/* Actual Image */}
+                  <div className={`w-full ${item.aspect} relative`}>
+                    <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                   </div>
 
                   {/* Hover Overlay */}
@@ -113,17 +73,59 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 md:p-8 backdrop-blur-sm cursor-zoom-out"
+          >
+            <button 
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-6 right-6 text-white hover:text-accent-500 transition-colors z-[110] bg-black/50 p-2 rounded-full"
+            >
+              <X size={32} />
+            </button>
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-6xl aspect-[4/3] max-h-[85vh] rounded-xl overflow-hidden shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image 
+                src={selectedImage} 
+                alt="Enlarged view" 
+                fill 
+                className="object-contain bg-black/50"
+                sizes="100vw"
+                quality={100}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary-900 text-white text-center">
         <div className="section-container">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Want to see our clinic in person?</h2>
-          <p className="text-primary-100 mb-8 max-w-2xl mx-auto text-lg">
-            Experience our premium facilities and advanced dental care firsthand.
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Ready to Experience Our Facilities?</h2>
+          <p className="text-primary-200 text-lg mb-8 max-w-2xl mx-auto">
+            Book a consultation today and see why thousands of patients trust SAI Dental since 1999 for their smiles.
           </p>
-          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary-900 rounded-full font-semibold hover:bg-primary-50 transition-colors shadow-xl shadow-black/10 hover:scale-105 duration-300">
-            <Calendar className="w-5 h-5" />
-            Book a Visit Today
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Link href="/contact" className="btn-gold px-8 py-3 rounded-full text-base font-bold shadow-lg shadow-accent-600/20">
+              Book Appointment
+              <Calendar className="w-4 h-4 ml-2 inline-block" />
+            </Link>
+            <Link href="tel:+917200596749" className="px-8 py-3 rounded-full text-base font-bold border-2 border-primary-700 hover:bg-primary-800 transition-colors">
+              Call Us
+            </Link>
+          </div>
         </div>
       </section>
     </main>
