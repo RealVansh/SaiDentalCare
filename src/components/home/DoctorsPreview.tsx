@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Award, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const doctors = [
   {
@@ -12,7 +13,9 @@ const doctors = [
     credentials: "BDS, MS (IF Germany)",
     specialty: "Dental Surgeon & Implantologist",
     desc: "Leading expert in advanced implantology and oral surgery with decades of experience. Dr. Nagaraj is renowned for his precision in full mouth rehabilitations.",
-    initials: "DN"
+    initials: "DN",
+    image: "/images/Doctors/Dr. Nagaraj.png",
+    imagePosition: "object-[center_25%]"
   },
   {
     id: "priya",
@@ -20,7 +23,9 @@ const doctors = [
     credentials: "BDS, FDS",
     specialty: "Restorative & Laser Dentist",
     desc: "Specializes in smile design, restorative procedures and pain-free laser dentistry for optimal patient comfort.",
-    initials: "DP"
+    initials: "DP",
+    image: "/images/Doctors/Dr. Priya Nagaraj.jpeg",
+    imagePosition: "object-[center_10%]"
   },
   {
     id: "abishek",
@@ -28,7 +33,9 @@ const doctors = [
     credentials: "BDS (MDS)",
     specialty: "Endodontics & Conservative Dentistry",
     desc: "Dedicated to saving natural teeth through precision endodontics and conservative treatments. Utilizing the latest rotary endodontics and magnification technology. Dr. Abishek brings a gentle touch to every procedure, focusing on minimal intervention and maximizing the preservation of natural tooth structure.",
-    initials: "DA"
+    initials: "DA",
+    image: "/images/Doctors/Dr. N.P. Abishek.png",
+    imagePosition: "object-[center_10%]"
   }
 ];
 
@@ -91,10 +98,14 @@ export const DoctorsPreview = () => {
                     <div className={`bg-white rounded-2xl p-8 text-center border shadow-lg transition-all duration-300 overflow-hidden ${
                       isExpanded ? 'border-accent-300 shadow-2xl ring-2 ring-accent-200/50' : 'border-neutral-100'
                     }`}>
-                      <div className={`mx-auto rounded-full bg-gradient-to-br from-accent-400 to-accent-600 mb-6 flex items-center justify-center shadow-lg gold-glow transition-all duration-400 ${
-                        isExpanded ? 'w-28 h-28' : 'w-24 h-24'
+                      <div className={`mx-auto rounded-full bg-gradient-to-br from-accent-400 to-accent-600 mb-6 flex items-center justify-center shadow-lg gold-glow transition-all duration-400 overflow-hidden relative ${
+                        isExpanded ? 'w-32 h-32' : 'w-28 h-28'
                       }`}>
-                        <span className={`font-heading font-bold text-white ${isExpanded ? 'text-4xl' : 'text-3xl'}`}>{doc.initials}</span>
+                        {doc.image ? (
+                          <Image src={doc.image} alt={doc.name} fill className={`object-cover ${doc.imagePosition || 'object-[center_10%]'}`} />
+                        ) : (
+                          <span className={`font-heading font-bold text-white ${isExpanded ? 'text-4xl' : 'text-3xl'}`}>{doc.initials}</span>
+                        )}
                       </div>
                       <h3 className="text-xl font-heading font-bold text-neutral-900 mb-1">{doc.name}</h3>
                       <p className="text-sm text-neutral-500 mb-3">{doc.credentials}</p>
@@ -167,12 +178,16 @@ export const DoctorsPreview = () => {
                       <div className={`flex h-full ${isExpanded ? 'flex-row items-center' : 'flex-col items-center justify-center'} p-8`}>
                         {/* Avatar + Basic Info */}
                         <div className={`flex flex-col items-center ${isExpanded ? 'pr-8 border-r border-neutral-100 min-w-[200px]' : ''}`}>
-                          <div className={`rounded-full bg-gradient-to-br from-accent-400 to-accent-600 mb-4 flex items-center justify-center shadow-lg gold-glow transition-all duration-400 ${
-                            isExpanded ? 'w-28 h-28' : 'w-24 h-24'
+                          <div className={`rounded-full bg-gradient-to-br from-accent-400 to-accent-600 mb-4 flex items-center justify-center shadow-lg gold-glow transition-all duration-400 overflow-hidden relative ${
+                            isExpanded ? 'w-32 h-32' : 'w-28 h-28'
                           }`}>
-                            <span className={`font-heading font-bold text-white transition-all duration-400 ${
-                              isExpanded ? 'text-4xl' : 'text-3xl'
-                            }`}>{doc.initials}</span>
+                            {doc.image ? (
+                              <Image src={doc.image} alt={doc.name} fill className={`object-cover ${doc.imagePosition || 'object-[center_10%]'}`} />
+                            ) : (
+                              <span className={`font-heading font-bold text-white transition-all duration-400 ${
+                                isExpanded ? 'text-4xl' : 'text-3xl'
+                              }`}>{doc.initials}</span>
+                            )}
                           </div>
                           <h3 className={`font-heading font-bold text-neutral-900 mb-1 text-center transition-all duration-300 ${
                             isExpanded ? 'text-xl' : isOther ? 'text-base' : 'text-xl'

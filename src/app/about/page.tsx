@@ -31,7 +31,9 @@ export default function AboutPage() {
       creds: "BDS, MS (IF Germany)",
       role: "Dental Surgeon & Implantologist",
       desc: "Leading expert in advanced implantology and oral surgery with decades of experience. Dr. Nagaraj is renowned for his precision in full mouth rehabilitations.",
-      initials: "DN"
+      initials: "DN",
+      image: "/images/Doctors/Dr. Nagaraj.png",
+      imagePosition: "object-[center_25%]"
     },
     {
       id: "priya",
@@ -39,7 +41,9 @@ export default function AboutPage() {
       creds: "BDS, FDS",
       role: "Restorative & Laser Dentist",
       desc: "Specializes in smile design, restorative procedures and pain-free laser dentistry for optimal patient comfort.",
-      initials: "DP"
+      initials: "DP",
+      image: "/images/Doctors/Dr. Priya Nagaraj.jpeg",
+      imagePosition: "object-[center_10%]"
     },
     {
       id: "abishek",
@@ -47,7 +51,9 @@ export default function AboutPage() {
       creds: "BDS (MDS)",
       role: "Endodontics & Conservative Dentistry",
       desc: "Dedicated to saving natural teeth through precision endodontics and conservative treatments. Utilizing the latest rotary endodontics and magnification technology. Dr. Abishek brings a gentle touch to every procedure, focusing on minimal intervention and maximizing the preservation of natural tooth structure.",
-      initials: "DA"
+      initials: "DA",
+      image: "/images/Doctors/Dr. N.P. Abishek.png",
+      imagePosition: "object-[center_10%]"
     }
   ];
 
@@ -151,8 +157,12 @@ export default function AboutPage() {
                     expandedDoctorId && expandedDoctorId !== doc.id ? 'opacity-40 scale-[0.97]' : ''
                   } ${expandedDoctorId === doc.id ? 'ring-2 ring-accent-500 shadow-lg' : ''}`}
                 >
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center text-3xl font-bold text-primary-700 mb-6 flex-shrink-0">
-                    {doc.initials}
+                  <div className="w-36 h-36 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center text-3xl font-bold text-primary-700 mb-6 flex-shrink-0 relative overflow-hidden">
+                    {doc.image ? (
+                      <Image src={doc.image} alt={doc.name} fill className={`object-cover ${doc.imagePosition || 'object-[center_10%]'}`} />
+                    ) : (
+                      <>{doc.initials}</>
+                    )}
                   </div>
                   <h4 className="font-heading text-xl font-bold text-neutral-900 mb-1">{doc.name}</h4>
                   <p className="text-sm text-neutral-500 mb-3">{doc.creds}</p>
@@ -181,8 +191,12 @@ export default function AboutPage() {
                     <div className="mt-8 bg-white rounded-2xl border border-neutral-200 shadow-lg p-8 md:p-10 flex flex-col md:flex-row gap-8">
                       {/* Left: Avatar + info */}
                       <div className="md:w-1/3 flex flex-col items-center text-center">
-                        <div className="w-28 h-28 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center text-4xl font-bold text-primary-700 mb-4">
-                          {doc.initials}
+                        <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center text-4xl font-bold text-primary-700 mb-4 relative overflow-hidden">
+                          {doc.image ? (
+                            <Image src={doc.image} alt={doc.name} fill className={`object-cover ${doc.imagePosition || 'object-[center_10%]'}`} />
+                          ) : (
+                            <>{doc.initials}</>
+                          )}
                         </div>
                         <h4 className="font-heading text-2xl font-bold text-neutral-900 mb-1">{doc.name}</h4>
                         <p className="text-sm text-neutral-500 mb-3">{doc.creds}</p>

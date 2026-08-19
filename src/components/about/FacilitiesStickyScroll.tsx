@@ -71,7 +71,7 @@ export const FacilitiesStickyScroll = ({ facilities }: { facilities: Facility[] 
     <>
     <section
       ref={sectionRef}
-      style={{ height: typeof window !== 'undefined' && window.innerWidth >= 768 ? `${facilities.length * VH_PER_ITEM}vh` : 'auto' }}
+      style={{ height: `${facilities.length * 150}vh` }}
       className="relative w-full hidden md:block"
     >
       {/* Sticky Container */}
