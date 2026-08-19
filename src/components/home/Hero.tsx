@@ -175,23 +175,25 @@ export const Hero = () => {
 
       {/* ── Stats Strip ── */}
       <motion.div
-        className="section-container grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 py-8 border-t border-neutral-200 text-center md:text-left relative z-10"
+        className="w-full border-t border-neutral-200 mt-8 py-10 relative z-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.6 }}
       >
-        <div className="stat-item flex flex-col items-center md:items-start">
-          <Counter end={27} suffix="+" />
-          <p className="text-sm text-neutral-600 mt-1 font-medium">Years Experience</p>
-        </div>
-        <div className="stat-item flex flex-col items-center md:items-start">
-          <Counter end={3} />
-          <p className="text-sm text-neutral-600 mt-1 font-medium">Generations of Trust</p>
-        </div>
-        <div className="stat-item flex flex-col items-center md:items-start">
-          <Counter end={10} suffix="+" />
-          <p className="text-sm text-neutral-600 mt-1 font-medium">Expert Doctors</p>
+        <div className="section-container max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-10 md:gap-4 px-4 md:px-8">
+          <div className="flex flex-col items-center md:items-start w-full md:w-1/3 md:border-l-2 md:border-accent-400 md:pl-6">
+            <Counter end={27} suffix="+" />
+            <p className="text-base text-neutral-600 mt-1 font-medium text-center md:text-left">Years Experience</p>
+          </div>
+          <div className="flex flex-col items-center md:items-start w-full md:w-1/3 md:border-l-2 md:border-accent-400 md:pl-6">
+            <Counter end={3} />
+            <p className="text-base text-neutral-600 mt-1 font-medium text-center md:text-left">Generations of Trust</p>
+          </div>
+          <div className="flex flex-col items-center md:items-start w-full md:w-1/3 md:border-l-2 md:border-accent-400 md:pl-6">
+            <Counter end={10} suffix="+" />
+            <p className="text-base text-neutral-600 mt-1 font-medium text-center md:text-left">Expert Doctors</p>
+          </div>
         </div>
       </motion.div>
     </section>
