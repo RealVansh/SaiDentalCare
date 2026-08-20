@@ -126,7 +126,7 @@ export default function ServicesPage() {
           id: "pediatric",
           title: "Pediatric Dentistry",
           Icon: Baby,
-          desc: "We at SAI Dental since 1999 specialize in full mouth pediatric rehabilitation and chair-side treatments with anti-anxiety therapy.",
+          desc: "We at Sai Dental since 1999 specialize in full mouth pediatric rehabilitation and chair-side treatments with anti-anxiety therapy.",
           bullets: []
         }
       ]
@@ -150,7 +150,7 @@ export default function ServicesPage() {
           id: "sedation",
           title: "Sedation Dentistry",
           Icon: Moon,
-          desc: "We at SAI Dental since 1999 understand that dental anxiety can be overwhelming. Our sedation dentistry services are designed to help you feel relaxed and comfortable during your dental procedure.",
+          desc: "We at Sai Dental since 1999 understand that dental anxiety can be overwhelming. Our sedation dentistry services are designed to help you feel relaxed and comfortable during your dental procedure.",
           bullets: []
         },
         {
@@ -384,7 +384,7 @@ export default function ServicesPage() {
             variants={fadeInUp}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 !text-white text-white">Ready to experience the difference at SAI Dental since 1999?</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 !text-white text-white">Ready to experience the difference at Sai Dental since 1999?</h2>
             <p className="text-primary-200 text-lg mb-8">Book your consultation today and take the first step towards a healthier, brighter smile.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-gold px-8 py-3 text-base">

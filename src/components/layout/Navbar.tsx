@@ -286,7 +286,7 @@ export function Navbar() {
                 ))}
                 <a
                   href="tel:+917200596749"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-primary-600 text-black text-sm font-medium rounded-full hover:bg-primary-700 transition-all duration-200 mt-4"
+                  className="btn-gold w-full mt-4"
                 >
                   <Phone className="w-4 h-4" />
                   Book Appointment
@@ -300,7 +300,7 @@ export function Navbar() {
       {/* ── Mobile Floating Call Button ── */}
       <a
         href="tel:+917200596749"
-        className="fixed bottom-6 right-6 z-40 lg:hidden flex items-center justify-center w-14 h-14 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all duration-200 hover:scale-105"
+        className="fixed bottom-6 right-6 z-40 lg:hidden flex items-center justify-center w-14 h-14 btn-gold !p-0 shadow-xl hover:scale-105"
         aria-label="Call to book appointment"
       >
         <Phone className="w-5 h-5" />
