@@ -19,19 +19,56 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://saidentalsince1999.in"),
   title: {
-    default: "Sai Dental since 1999 — Premium Dental Clinic",
+    default: "Sai Dental since 1999 | Premium Dental Care in Tambaram, Chennai",
     template: "%s | Sai Dental since 1999",
   },
   description:
-    "Experience world-class dental care with cutting-edge technology and a gentle touch. Sai Dental since 1999 offers comprehensive dental treatments in a comfortable, modern environment.",
+    "Sai Dental since 1999 is a premium Full Mouth Rehabilitation Centre in Tambaram, Chennai. Experience world-class dental care, implants, and cosmetic dentistry.",
   keywords: [
-    "dental clinic",
-    "dentist",
-    "dental care",
-    "cosmetic dentistry",
-    "orthodontics",
-    "dental implants",
+    "Sai Dental",
+    "Sai Dental since 1999",
+    "Sai Dental Chennai",
+    "Sai Dental Tambaram",
+    "Best dentist in Chennai",
+    "Best dentist in Tambaram",
+    "Dental clinic in West Tambaram",
+    "Full mouth rehabilitation Chennai",
+    "Dental implants Chennai",
+    "Cosmetic dentistry Chennai",
+    "Top dental clinic near me",
   ],
+  authors: [{ name: "Sai Dental" }],
+  creator: "Sai Dental",
+  publisher: "Sai Dental",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "Sai Dental since 1999 | Premium Dental Care",
+    description: "Experience world-class dental care at our Full Mouth Rehabilitation Centre in Tambaram, Chennai.",
+    url: "https://saidentalsince1999.in",
+    siteName: "Sai Dental since 1999",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sai Dental since 1999 | Tambaram, Chennai",
+    description: "Premium Full Mouth Rehabilitation Centre in Tambaram, Chennai. Book your consultation today.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 import { MobileActionBar } from "@/components/ui/MobileActionBar";
