@@ -3,18 +3,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { 
-  CircleDot, 
-  Target, 
-  Shield, 
   Sparkles, 
-  Crown, 
-  AlignCenter, 
-  Layers, 
-  Droplets, 
-  Baby, 
-  Zap, 
-  Moon, 
+  Shield, 
   Smile,
+  Target,
   ArrowRight,
   X
 } from "lucide-react";
@@ -44,8 +36,8 @@ export default function ServicesPage() {
         {
           id: "implantology",
           title: "Implantology",
-          Icon: CircleDot,
-          desc: "We make dental implant process the easiest experience possible. You'll be smiling, speaking and chewing in no time and for years to come.",
+          desc: "Implants for everyone, for any given condition. You'll be smiling, speaking and chewing in no time.",
+          fullDesc: "We make dental implant process the easiest experience possible. You'll be smiling, speaking and chewing in no time and for years to come.",
           bullets: [
             "Contemporary implants",
             "Minimally invasive",
@@ -56,8 +48,8 @@ export default function ServicesPage() {
         {
           id: "root-canal",
           title: "Root Canal Treatment",
-          Icon: Target,
-          desc: "Root canals are specialized procedure aimed at saving severely damaged or infected teeth. We perform root canal procedure with precision and care, alleviating pain and preserving your natural teeth.",
+          desc: "Saving severely damaged or infected teeth with precision care, alleviating pain and preserving your natural teeth.",
+          fullDesc: "Root canals are specialized procedure aimed at saving severely damaged or infected teeth. We perform root canal procedure with precision and care, alleviating pain and preserving your natural teeth.",
           bullets: []
         }
       ]
@@ -68,22 +60,22 @@ export default function ServicesPage() {
         {
           id: "smile-designing",
           title: "Smile Designing",
-          Icon: Sparkles,
-          desc: "Involves correction of alignment, tooth gaps, missing teeth, gummy smiles, tooth discoloration. Midline space closure with veneer or fillings are done based on patient's requirement.",
+          desc: "Correction of alignment, gaps, gummy smiles, and discoloration for the perfect smile.",
+          fullDesc: "Involves correction of alignment, tooth gaps, missing teeth, gummy smiles, tooth discoloration. Midline space closure with veneer or fillings are done based on patient's requirement.",
           bullets: []
         },
         {
           id: "crowns-bridges",
           title: "Crowns & Bridges",
-          Icon: Crown,
-          desc: "Digitally scanned and digitally crafted crowns and bridges are fabricated. We provide premium quality Zirconia and Ceramic prosthesis matching global standards.",
+          desc: "Digitally scanned and crafted. Premium Zirconia and Ceramic prosthesis matching global standards.",
+          fullDesc: "Digitally scanned and digitally crafted crowns and bridges are fabricated. We provide premium quality Zirconia and Ceramic prosthesis matching global standards.",
           bullets: []
         },
         {
           id: "orthodontics",
           title: "Orthodontics",
-          Icon: AlignCenter,
-          desc: "Done by India's one of the top most orthodontist with 35 years of experience. It's never too late to correct your teeth. Orthodontic treatment not only gives you a more beautiful smile, but can also improve your oral health.",
+          desc: "By India's top orthodontist with 35 years experience. All modern systems available.",
+          fullDesc: "Done by India's one of the top most orthodontist with 35 years of experience. It's never too late to correct your teeth. Orthodontic treatment not only gives you a more beautiful smile, but can also improve your oral health.",
           bullets: [
             "All types of modernized systems provided",
             "Jaw growth correction between age 6-10 for enhanced facial appearance"
@@ -92,8 +84,8 @@ export default function ServicesPage() {
         {
           id: "aligners",
           title: "Aligners",
-          Icon: Layers,
-          desc: "Aligner is a revolutionary teeth alignment that's more discreet than traditional braces.",
+          desc: "AI-guided, virtually invisible, personalized treatment with 3D simulation preview.",
+          fullDesc: "Aligner is a revolutionary teeth alignment that's more discreet than traditional braces.",
           bullets: [
             "Virtually invisible, lightweight, comfortable, removable",
             "Hassle-free and quicker",
@@ -111,22 +103,22 @@ export default function ServicesPage() {
         {
           id: "deep-caries",
           title: "Deep Caries Management",
-          Icon: Shield,
-          desc: "We aim in arresting the decay, while preserving tooth vitality by avoiding root canal treatment wherever possible, thereby extending the life of the tooth.",
+          desc: "Arresting decay while preserving tooth vitality, avoiding root canal wherever possible.",
+          fullDesc: "We aim in arresting the decay, while preserving tooth vitality by avoiding root canal treatment wherever possible, thereby extending the life of the tooth.",
           bullets: []
         },
         {
           id: "deep-scaling",
           title: "Deep Scaling",
-          Icon: Droplets,
-          desc: "Involves gentle and thorough cleaning of teeth, gums, bone — not just aesthetic cleaning.",
+          desc: "Gentle and thorough cleaning of teeth, gums, and bone — not just aesthetic cleaning.",
+          fullDesc: "Involves gentle and thorough cleaning of teeth, gums, bone — not just aesthetic cleaning.",
           bullets: []
         },
         {
           id: "pediatric",
           title: "Pediatric Dentistry",
-          Icon: Baby,
-          desc: "We at Sai Dental since 1999 specialize in full mouth pediatric rehabilitation and chair-side treatments with anti-anxiety therapy.",
+          desc: "Full mouth pediatric rehabilitation with chair-side anti-anxiety therapy for children.",
+          fullDesc: "We at Sai Dental since 1999 specialize in full mouth pediatric rehabilitation and chair-side treatments with anti-anxiety therapy.",
           bullets: []
         }
       ]
@@ -137,8 +129,8 @@ export default function ServicesPage() {
         {
           id: "laser-dentistry",
           title: "Laser Dentistry",
-          Icon: Zap,
-          desc: "Lasers are modern, safe, and can be used for all ages.",
+          desc: "No pain, no antibiotics, no suturing. Safe for all ages including pregnancy.",
+          fullDesc: "Lasers are modern, safe, and can be used for all ages.",
           bullets: [
             "No pain, no antibiotics, no blood",
             "No suturing required",
@@ -149,15 +141,15 @@ export default function ServicesPage() {
         {
           id: "sedation",
           title: "Sedation Dentistry",
-          Icon: Moon,
-          desc: "We at Sai Dental since 1999 understand that dental anxiety can be overwhelming. Our sedation dentistry services are designed to help you feel relaxed and comfortable during your dental procedure.",
+          desc: "Relaxed, comfortable dental procedures designed for patients with dental anxiety.",
+          fullDesc: "We at Sai Dental since 1999 understand that dental anxiety can be overwhelming. Our sedation dentistry services are designed to help you feel relaxed and comfortable during your dental procedure.",
           bullets: []
         },
         {
           id: "dentures",
           title: "Dentures",
-          Icon: Smile,
-          desc: "We provide dentures created with top-of-the-line materials to help restore your ability to chew, speak, and smile.",
+          desc: "Top-of-the-line materials to restore your ability to chew, speak, and smile confidently.",
+          fullDesc: "We provide dentures created with top-of-the-line materials to help restore your ability to chew, speak, and smile.",
           bullets: []
         }
       ]
@@ -199,9 +191,9 @@ export default function ServicesPage() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeInUp}
-                className="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-12 border-b border-neutral-200 pb-4"
+                className="font-heading text-3xl md:text-4xl font-bold mb-12 pb-4 border-b border-accent-200/50"
               >
-                {category.title}
+                <span className="gradient-text-gold">{category.title}</span>
               </motion.h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.services.map((service, i) => (
@@ -216,34 +208,23 @@ export default function ServicesPage() {
                       hidden: { opacity: 0, y: 20 },
                       visible: { opacity: 1, y: 0, transition: { delay: (i % 3) * 0.1 } }
                     }}
-                    className={`glass-card rounded-2xl p-8 hover:-translate-y-1 transition-all duration-300 cursor-pointer hover:shadow-lg ${
+                    className={`group relative rounded-2xl p-8 border border-neutral-100 bg-white hover:-translate-y-1 transition-all duration-300 cursor-pointer hover:shadow-xl hover:border-accent-300/50 overflow-hidden ${
                       expandedServiceId === service.id
-                        ? 'ring-2 ring-accent-500 shadow-lg'
+                        ? 'ring-2 ring-accent-500 shadow-lg border-accent-300/50'
                         : expandedServiceId && category.services.some(s => s.id === expandedServiceId)
                           ? 'opacity-40 scale-[0.97]'
                           : ''
                     }`}
                   >
-                    <div className="w-14 h-14 rounded-full bg-accent-50 flex items-center justify-center mb-6">
-                      <service.Icon className="w-7 h-7 text-accent-600" />
-                    </div>
-                    <h3 className="font-heading text-xl font-bold text-neutral-900 mb-4">{service.title}</h3>
-                    <p className="text-neutral-600 mb-4 leading-relaxed line-clamp-3">{service.desc}</p>
-                    {service.bullets.length > 0 && (
-                      <ul className="space-y-2">
-                        {service.bullets.slice(0, 3).map((bullet, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary-400 mt-2 flex-shrink-0" />
-                            <span className="text-sm text-neutral-600 line-clamp-1">{bullet}</span>
-                          </li>
-                        ))}
-                        {service.bullets.length > 3 && (
-                          <li className="text-sm text-accent-600 font-medium pt-1">
-                            + {service.bullets.length - 3} more
-                          </li>
-                        )}
-                      </ul>
-                    )}
+                    {/* Gold top accent line */}
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-400 via-accent-500 to-accent-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    
+                    <h3 className="font-heading text-xl font-bold text-accent-600 mb-3">{service.title}</h3>
+                    <p className="text-neutral-600 leading-relaxed mb-5">{service.desc}</p>
+                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-600 group-hover:text-accent-700 transition-colors">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -286,15 +267,10 @@ export default function ServicesPage() {
                     <X className="w-5 h-5" />
                   </button>
                   
-                  <div className="flex-1 flex flex-col md:flex-row md:items-center gap-6">
-                    <div className="w-16 h-16 rounded-full bg-accent-50/20 flex items-center justify-center flex-shrink-0">
-                      <service.Icon className="w-8 h-8 text-accent-400" />
-                    </div>
-                    <div>
+                  <div className="flex-1">
                       <h3 className="font-heading text-3xl md:text-4xl font-bold text-white mb-2">{service.title}</h3>
                       <p className="text-primary-100 text-base md:text-lg">Premium Dental Care</p>
                     </div>
-                  </div>
 
                   <div className="mt-2 md:mt-0 md:ml-auto">
                     <Link href={`/contact?service=${encodeURIComponent(service.title)}`} className="btn-gold py-2.5 px-6 whitespace-nowrap shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center font-medium">
@@ -305,7 +281,7 @@ export default function ServicesPage() {
 
                 {/* Body */}
                 <div className="p-8 md:p-10">
-                  <p className="text-neutral-700 text-lg md:text-xl mb-10 leading-relaxed font-medium">{service.desc}</p>
+                  <p className="text-neutral-700 text-lg md:text-xl mb-10 leading-relaxed font-medium">{service.fullDesc}</p>
                   
                   {service.id === 'root-canal' || service.id === 'deep-caries' || service.id === 'deep-scaling' || service.id === 'pediatric' || service.id === 'sedation' || service.id === 'dentures' ? null : service.id === 'implantology' || service.id === 'orthodontics' || service.id === 'laser-dentistry' ? (
                     <div className="bg-neutral-50/50 rounded-2xl p-6 md:p-8 border border-neutral-100/50 max-w-3xl mx-auto">

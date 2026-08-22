@@ -29,7 +29,7 @@ export const AboutPreview = () => {
             <div className="floating-frame">
               <div className="aspect-video lg:aspect-square rounded-3xl overflow-hidden relative shadow-xl bg-neutral-100">
                 <Image 
-                  src="/images/clinic/room1.jpg" 
+                  src="/images/clinic/treatment-room-1.jpg" 
                   alt="State of the art treatment room" 
                   fill 
                   className="object-cover"
@@ -41,7 +41,7 @@ export const AboutPreview = () => {
             {/* Secondary image — offset behind for layered collage */}
             <div className="absolute -bottom-8 -right-4 w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shadow-xl border-4 border-white hidden md:block">
               <Image 
-                src="/images/clinic/reception.jpg" 
+                src="/images/clinic/clinic-reception.jpg" 
                 alt="Sai Dental since 1999 reception" 
                 fill 
                 className="object-cover"

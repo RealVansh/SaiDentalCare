@@ -10,8 +10,8 @@ import Image from 'next/image';
 const galleryItems = [
   { id: 2, title: "Reception Area", aspect: "aspect-[4/3]", image: "/images/clinic/clinic-reception.jpg" },
   { id: 1, title: "Waiting Lounge", aspect: "aspect-[4/3]", image: "/images/clinic/clinic-waiting.jpg" },
-  { id: 3, title: "Treatment Room 1", aspect: "aspect-[4/3]", image: "/images/clinic/treatment-room-1.jpg" },
   { id: 4, title: "Treatment Room 2", aspect: "aspect-[4/3]", image: "/images/clinic/treatment-room-2.jpg" },
+  { id: 3, title: "Treatment Room 1", aspect: "aspect-[4/3]", image: "/images/clinic/treatment-room-1.jpg" },
   { id: 5, title: "Treatment Room 3", aspect: "aspect-[4/3]", image: "/images/clinic/treatment-room-3.jpg" },
   { id: 6, title: "Treatment Room 4", aspect: "aspect-[4/3]", image: "/images/clinic/treatment-room-4.jpg" }
 ];
