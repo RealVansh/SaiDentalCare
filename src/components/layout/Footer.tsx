@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ExternalLink } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -110,11 +110,21 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />
-                <span className="text-sm text-neutral-400">
-                  No. 22, 2nd Floor, Kakkan Street,
-                  <br />
-                  West Tambaram, Chennai – 600045
-                </span>
+                <div className="flex flex-col items-start">
+                  <a 
+                    href="https://maps.app.goo.gl/33SutKHgTcvkjdhc8" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm text-neutral-400 hover:text-white transition-colors group"
+                  >
+                    No. 22, 2nd Floor, Kakkan Street,
+                    <br />
+                    West Tambaram, Chennai – 600045
+                    <span className="flex items-center gap-1.5 mt-2 text-accent-500 group-hover:text-accent-400 font-medium">
+                      Open in Maps <ExternalLink className="w-3.5 h-3.5" />
+                    </span>
+                  </a>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 mt-0.5 text-accent-500 shrink-0" />

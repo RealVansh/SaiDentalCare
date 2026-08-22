@@ -139,15 +139,16 @@ export const TreatmentsPreview = () => {
             return (
               <motion.div key={index} variants={itemVariants} className="w-[85vw] flex-shrink-0 snap-center md:w-auto">
                 <button onClick={() => setExpandedId(treatment.id)} className="block h-full w-full text-left">
-                  <div className={`p-6 rounded-2xl h-full flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl bg-white border border-neutral-100 group border-t-2 border-t-transparent ${treatment.borderColor}`}>
-                    <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-6 ${treatment.bgColor} ${treatment.color} transition-transform group-hover:scale-110`}>
-                      <Icon size={28} />
-                    </div>
-                    <h3 className="text-xl font-bold font-heading text-neutral-900 mb-3">{treatment.name}</h3>
-                    <p className="text-neutral-600 mb-6 flex-grow">{treatment.description}</p>
-                    <div className="text-neutral-500 font-medium flex items-center group-hover:text-neutral-900 transition-colors">
-                      Learn more <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
+                  <div className={`p-8 rounded-2xl h-full flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl bg-white border border-neutral-100 group overflow-hidden relative`}>
+                    {/* Gold top accent line */}
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-400 via-accent-500 to-accent-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    
+                    <h3 className="text-xl font-bold font-heading text-accent-600 mb-3">{treatment.name}</h3>
+                    <p className="text-neutral-600 mb-6 flex-grow leading-relaxed">{treatment.description}</p>
+                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-600 group-hover:text-accent-700 transition-colors">
+                      Learn More
+                      <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                    </span>
                   </div>
                 </button>
               </motion.div>
@@ -195,15 +196,10 @@ export const TreatmentsPreview = () => {
                     <X className="w-5 h-5" />
                   </button>
                   
-                  <div className="flex-1 flex flex-col md:flex-row md:items-center gap-6">
-                    <div className="w-16 h-16 rounded-full bg-accent-50/20 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-8 h-8 text-accent-400" />
-                    </div>
-                    <div>
+                  <div className="flex-1">
                       <h3 className="font-heading text-3xl md:text-4xl font-bold text-white mb-2">{selectedTreatment.name}</h3>
                       <p className="text-primary-100 text-base md:text-lg">Premium Dental Care</p>
                     </div>
-                  </div>
 
                   <div className="mt-2 md:mt-0 md:ml-auto">
                     <Link href={`/contact?service=${encodeURIComponent(selectedTreatment.name)}`} className="btn-gold py-2.5 px-6 whitespace-nowrap shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center font-medium">

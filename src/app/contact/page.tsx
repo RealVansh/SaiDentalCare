@@ -45,7 +45,7 @@ export default function ContactPage() {
                 <MapPin className="w-8 h-8 text-primary-600" />
               </div>
               <h3 className="font-semibold text-xl font-heading text-neutral-900 mb-4">Location</h3>
-              <a href="https://www.google.com/maps/place/Sai+Dental+since+1999/@12.927025,80.1120121,20.6z/data=!4m7!3m6!1s0x3a525f003f322e7d:0x2d4b87662812f94!4b1!8m2!3d12.9269826!4d80.1120806!16s%2Fg%2F11z2k9h5pr?entry=ttu&g_ep=EgoyMDI2MDgxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-neutral-600 leading-relaxed hover:text-primary-600 transition-colors">
+              <a href="https://maps.app.goo.gl/33SutKHgTcvkjdhc8" target="_blank" rel="noopener noreferrer" className="text-neutral-600 leading-relaxed hover:text-primary-600 transition-colors">
                 No. 22, 2nd Floor, Kakkan Street,<br />
                 West Tambaram, Chennai – 600045
               </a>
@@ -78,7 +78,7 @@ export default function ContactPage() {
           <h2 className="text-2xl md:text-3xl font-bold font-heading text-neutral-900 mb-8 text-center">Find Us on the Map</h2>
           <div className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border border-neutral-200 bg-neutral-200">
             <iframe 
-              src="https://maps.google.com/maps?q=Sai+dental+full+rehabilition+centre&t=&z=19&ie=UTF8&iwloc=&output=embed" 
+              src="https://maps.google.com/maps?q=12.9269826,80.1120806&t=&z=18&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
