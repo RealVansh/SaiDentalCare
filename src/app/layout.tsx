@@ -17,6 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://saidentalsince1999.in"),
   title: {
     default: "Sai Dental since 1999 — Premium Dental Clinic",
     template: "%s | Sai Dental since 1999",
