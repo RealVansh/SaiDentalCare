@@ -64,7 +64,7 @@ export const Hero = () => {
   return (
     <section className="min-h-screen flex flex-col overflow-hidden relative">
       {/* ── Black hero area ── */}
-      <div className="flex-grow bg-black pt-20 relative">
+      <div className="flex-grow bg-black pt-12 relative">
         {/* ── Layered background effects on black ── */}
         {/* Warm golden radial glow — center */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[500px] h-[500px] md:w-[700px] md:h-[700px] bg-accent-500/10 rounded-full blur-[120px] pointer-events-none" />
@@ -83,21 +83,21 @@ export const Hero = () => {
           >
 
             {/* ── "SAI Dental" — top ── */}
-            <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-8xl font-heading font-bold gradient-text-gold leading-tight mb-6">
-              SAI Dental
+            <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-8xl font-heading font-bold gradient-text-gold leading-tight mb-14 text-center w-full mx-auto flex justify-center">
+              Sai Dental
             </motion.h1>
 
             {/* ── Logo Centerpiece with floating badges ── */}
             <motion.div 
               variants={itemVariants}
-              className="relative my-4 md:my-6"
+              className="relative my-2 md:my-4"
             >
-              {/* Decorative gold ring */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[270px] h-[270px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] rounded-full border border-accent-500/20 pointer-events-none" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] h-[290px] md:w-[365px] md:h-[365px] lg:w-[405px] lg:h-[405px] rounded-full border border-accent-400/10 pointer-events-none" />
+              {/* Decorative gold ring (Brighter) */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[270px] h-[270px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] rounded-full border border-accent-400/50 pointer-events-none" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] h-[290px] md:w-[365px] md:h-[365px] lg:w-[405px] lg:h-[405px] rounded-full border border-accent-300/40 pointer-events-none" />
 
-              {/* Glowing orb behind logo */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] md:w-[300px] md:h-[300px] bg-gradient-to-tr from-accent-500/15 to-accent-400/10 rounded-full blur-[60px] animate-pulse-subtle" />
+              {/* Glowing orb behind logo (Brighter) */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] md:w-[300px] md:h-[300px] bg-gradient-to-tr from-accent-400/30 to-accent-300/20 rounded-full blur-[50px] animate-pulse-subtle" />
 
               {/* The Gold Logo */}
               <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 animate-float z-10">
@@ -105,7 +105,7 @@ export const Hero = () => {
                   src="/images/gold-logo-transparent.png"
                   alt="SAI Dental Gold Logo"
                   fill
-                  className="object-contain drop-shadow-[0_0_40px_rgba(214,163,101,0.35)]"
+                  className="object-contain drop-shadow-[0_0_40px_rgba(214,163,101,0.5)]"
                   priority
                 />
               </div>
@@ -143,8 +143,8 @@ export const Hero = () => {
               </motion.div>
             </motion.div>
 
-            {/* ── "SINCE 1999" — below logo (bigger + bold) ── */}
-            <motion.div variants={itemVariants} className="flex items-center gap-4 mt-6 mb-3">
+            {/* ── "SINCE 1999" — below logo ── */}
+            <motion.div variants={itemVariants} className="flex items-center gap-4 mt-12 mb-3">
               <span className="w-10 md:w-16 h-px bg-gradient-to-r from-transparent to-accent-400" />
               <span className="text-xl md:text-2xl font-bold tracking-[0.25em] text-accent-400 uppercase">
                 SINCE 1999
@@ -152,7 +152,7 @@ export const Hero = () => {
               <span className="w-10 md:w-16 h-px bg-gradient-to-l from-transparent to-accent-400" />
             </motion.div>
 
-            {/* ── "Full Mouth Rehabilitation Centre" — below since 1999 (bigger) ── */}
+            {/* ── "Full Mouth Rehabilitation Centre" ── */}
             <motion.span variants={itemVariants} className="eyebrow-label-light text-sm md:text-base mb-8">
               Full Mouth Rehabilitation Centre
             </motion.span>

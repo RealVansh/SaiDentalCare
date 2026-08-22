@@ -78,7 +78,11 @@ export default function AboutPage() {
             variants={fadeInUp}
             className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            About <span className="gradient-text-gold">Sai Dental since 1999</span>
+            <span className="block md:inline">About</span>
+            <span className="hidden md:inline"> </span>
+            <span className="block md:inline gradient-text-gold">Sai Dental</span>
+            <span className="hidden md:inline"> </span>
+            <span className="block md:inline gradient-text-gold text-[0.7em] md:text-[1em] mt-1 md:mt-0">since 1999</span>
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -104,7 +108,7 @@ export default function AboutPage() {
               className="rounded-2xl aspect-square overflow-hidden relative shadow-lg bg-neutral-100"
             >
               <Image 
-                src="/images/clinic/reception.jpg" 
+                src="/images/clinic/clinic-reception.jpg" 
                 alt="Sai Dental since 1999 Reception" 
                 fill 
                 className="object-cover"
