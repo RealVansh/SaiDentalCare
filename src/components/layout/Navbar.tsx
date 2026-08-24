@@ -309,15 +309,6 @@ export function Navbar() {
           )}
         </AnimatePresence>
       </header>
-
-      {/* ── Mobile Floating Call Button ── */}
-      <a
-        href="tel:+917200596749"
-        className="fixed bottom-6 right-6 z-40 lg:hidden flex items-center justify-center w-14 h-14 btn-gold !p-0 shadow-xl hover:scale-105"
-        aria-label="Call to book appointment"
-      >
-        <Phone className="w-5 h-5" />
-      </a>
     </>
   );
 }
