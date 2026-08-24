@@ -231,7 +231,9 @@ export function Navbar() {
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-neutral-100 overflow-hidden"
             >
-              <div className="section-container py-6 flex flex-col gap-1">
+              {/* Inner wrapper allows scrolling if menu gets taller than screen */}
+              <div className="max-h-[calc(100vh-80px)] overflow-y-auto overscroll-contain">
+                <div className="section-container py-6 flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <div key={link.href}>
                     {link.hasDropdown ? (
@@ -301,6 +303,7 @@ export function Navbar() {
                   <Phone className="w-4 h-4" />
                   Book Appointment
                 </a>
+              </div>
               </div>
             </motion.div>
           )}
