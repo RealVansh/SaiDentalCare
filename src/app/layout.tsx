@@ -45,6 +45,15 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: [
+      { url: '/icon.png' },
+      new URL('/icon.png', 'https://saidentalsince1999.in'),
+    ],
+    apple: [
+      { url: '/icon.png' },
+    ],
+  },
   openGraph: {
     title: "Sai Dental since 1999 | Premium Dental Care",
     description: "Experience world-class dental care at our Full Mouth Rehabilitation Centre in Tambaram, Chennai.",
